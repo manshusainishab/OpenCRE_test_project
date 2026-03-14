@@ -1,6 +1,6 @@
 def structural_code_filter(commit):
     """
-    Placeholder for CodeRabbit.
+    Acts as CodeRabbit.
     Currently naive heuristic:
     If commit message contains refactor/lint/format → discard
     """

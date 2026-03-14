@@ -67,3 +67,16 @@ print("Precision:", round(precision, 4))
 print("Recall:", round(recall, 4))
 print("\nConfusion Matrix:")
 print(cm)
+
+
+print("\nFalse Negatives (missed security commits):")
+
+for i, (true, pred) in enumerate(zip(y_true, y_pred)):
+    if true == 1 and pred == 0:
+        commit = data[i]
+        print("\n---")
+        print("Hash:", commit["hash"])
+        print("Message:", commit["message"])
+        print("Files:", commit["files"])
+        print("Added Lines Preview:")
+        print(commit["added_lines"][:500])
